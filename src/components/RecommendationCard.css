@@ -1,0 +1,126 @@
+.recommendation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(30, 41, 59, 0.85); /* Slightly darker for contrast */
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 0.75rem;
+}
+
+.weather-section {
+  display: flex;
+  gap: 2rem;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+}
+
+.weather-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.weather-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.weather-value {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.ai-recommendation {
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.05));
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-recommendation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
+}
+
+.ai-recommendation h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  color: #93c5fd;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ai-recommendation h3::before {
+  content: '✨';
+}
+
+.recommendation-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+}
+
+.places-section h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.places-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.place-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.place-item::before {
+  content: '📍';
+  margin-right: 0.5rem;
+  font-size: 0.9em;
+}
+
+.place-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
