@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: weathergo-frontend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # 如果你之后也将后端加入了 Docker Compose，可以取消下面两行的注释，确保后端先启动：
+    # depends_on:
+    #   - backend
+
+  # ==========================================
+  # 【可选】如果你需要同时使用 Docker 启动后端，可以参考以下配置
+  # ==========================================
+  # backend:
+  #   build:
+  #     context: ../WeatherGo-Backend  # 指向后端项目的相对路径
+  #     dockerfile: Dockerfile
+  #   container_name: weathergo-backend
+  #   ports:
+  #     - "5002:5002"
+  #   restart: unless-stopped
