@@ -25,7 +25,7 @@ function App() {
       const data = await fetchRecommendation(location, activityType);
       setResult(data);
     } catch (err) {
-      setError(err.message || 'An unexpected error occurred');
+      setError(err.message || 'An unexpected error occurred or location not found');
     } finally {
       setLoading(false);
     }
