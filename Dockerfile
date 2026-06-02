@@ -25,7 +25,10 @@ COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 # Copy the built assets from the builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Expose port 80
+# Set default port if the hosting platform doesn't provide one
+ENV PORT=80
+
+# Expose port (mostly informative)
 EXPOSE 80
 
 # Start Nginx
