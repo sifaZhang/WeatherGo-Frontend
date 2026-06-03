@@ -60,12 +60,37 @@ function App() {
                 value={activityType} 
                 onChange={(e) => setActivityType(e.target.value)}
               >
-                <option value="restaurant">Dining / Restaurant</option>
-                <option value="cafe">Cafe</option>
-                <option value="park">Park / Outdoors</option>
-                <option value="museum">Museum</option>
-                <option value="cinema">Cinema</option>
-                <option value="shopping">Shopping</option>
+                <optgroup label="Food & Dining">
+                  <option value="restaurant">Restaurant</option>
+                  <option value="cafe">Cafe</option>
+                  <option value="bar">Bar</option>
+                  <option value="fast_food">Fast Food</option>
+                </optgroup>
+                <optgroup label="Leisure & Entertainment">
+                  <option value="park">Park</option>
+                  <option value="playground">Playground</option>
+                  <option value="cinema">Cinema</option>
+                  <option value="theatre">Theatre</option>
+                </optgroup>
+                <optgroup label="Sports & Fitness">
+                  <option value="gym">Gym</option>
+                  <option value="fitness_centre">Fitness Centre</option>
+                  <option value="swimming_pool">Swimming Pool</option>
+                </optgroup>
+                <optgroup label="Shopping">
+                  <option value="supermarket">Supermarket</option>
+                  <option value="shopping_mall">Shopping Mall</option>
+                </optgroup>
+                <optgroup label="Education">
+                  <option value="library">Library</option>
+                  <option value="school">School</option>
+                  <option value="university">University</option>
+                </optgroup>
+                <optgroup label="Healthcare">
+                  <option value="hospital">Hospital</option>
+                  <option value="pharmacy">Pharmacy</option>
+                  <option value="clinic">Clinic</option>
+                </optgroup>
               </select>
             </div>
 
