@@ -1,0 +1,15 @@
+name: Deploy to Render
+
+on:
+  push:
+    branches:
+      - main # 如果你的默认分支叫 master，请改成 master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render Frontend Deploy
+        run: |
+          echo "Triggering Render deployment..."
+          curl -s -X POST ${{ secrets.RENDER_DEPLOY_HOOK_FRONTEND }}
